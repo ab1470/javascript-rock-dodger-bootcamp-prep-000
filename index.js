@@ -88,6 +88,7 @@ function createRock(x) {
 function endGame() {
   clearInterval(gameInterval);
 
+  //line 92 was copied from the official solution. 
   ROCKS.forEach(function(rock) { rock.remove() })
   
   //Not sure why the following code didn't pass the test.
