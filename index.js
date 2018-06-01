@@ -88,24 +88,13 @@ function createRock(x) {
 function endGame() {
   clearInterval(gameInterval);
 
-  var rockList = document.getElementsByClassName('rock')
+  ROCKS.forEach(function(rock) { rock.remove() })
+  
+  //Not sure why the following code didn't pass the test.
+  /*var rockList = document.getElementsByClassName('rock')
   while(rockList.length > 0) {
     rockList[0].remove()
-  }
-  
-  /*for (let i=0; i < ROCKS.length; i++) {
-    var rockList = document.getElementsByClassName('rock');
-    rock[i].remove();
-    //ROCKS.shift();
-  }*/
-  
- /* while (ROCKS.length > 0) {
-    let i = 0;
-    var rock = document.getElementsByClassName('rock');
-    rock[i].remove();
-    ROCKS.pop();
-    i++
-  }*/
+  }*/ 
   
   window.removeEventListener('keydown', moveDodger);
   alert('YOU LOSE!');
